@@ -1,0 +1,2 @@
+# STicketBot
+Simple Ticket Bot
