@@ -28,9 +28,9 @@ pip install -r requirements.txt
 
 Заполните **config.ini** используя ваши данные.
 
-token - Токен бота для авторизации бота \n
-guild_id - ID вашей дискорд группа \n
-support - Роль поддержки \n
+token - Токен бота для авторизации бота
+guild_id - ID вашей дискорд группы
+support - Роль поддержки
 sub_support - Вторая роль поддержки
 
 ```
