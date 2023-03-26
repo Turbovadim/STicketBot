@@ -6,3 +6,11 @@
 ![Закрыть тикет](https://turbovadim.ru/github/close.png)
 
 ## Использование бота
+### 1. Установка зависимостей
+```
+# Windows
+python -m pip install -r requirements.txt
+
+# Linux
+pip install -r requirements.txt
+```
