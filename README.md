@@ -12,12 +12,12 @@
 Скачайте бота по ссылке https://github.com/Turbovadim/STicketBot/releases/latest/
 
 Или клонируйте репозиторий используя данную команду
-```
+```bash
 git clone https://github.com/Turbovadim/STicketBot
 ```
 
 ### 2. Установка зависимостей
-```
+```bash
 # Windows
 python -m pip install -r requirements.txt
 
@@ -45,6 +45,6 @@ sub_support=
 ### 4. Запуск бота
 
 Запустите бота при помощи команды
-```
+```bash
 python bot.py
 ```
