@@ -3,3 +3,6 @@
 
 ![Сообщение созздания тикета](https://turbovadim.ru/github/message.png)
 ![Модальное окно](https://turbovadim.ru/github/modal.png)
+![Закрыть тикет](https://turbovadim.ru/github/close.png)
+
+## Использование бота
