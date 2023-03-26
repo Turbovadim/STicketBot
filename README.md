@@ -1,2 +1,3 @@
 # STicketBot
-Simple Ticket Bot
+Простой бот для тикетов в дискорде использующий модальное окно для создания тикета
+![Модальное окно](https://turbovadim.ru/github/message.png "Орк")
