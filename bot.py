@@ -1,12 +1,16 @@
+import configparser
 import disnake
 from disnake.ext import commands
 from disnake import TextInputStyle
- 
-bot = commands.InteractionBot(test_guilds=[Сюда ID вашего дискорд группы]) # ID дискорд группы
+
+config = configparser.ConfigParser()  # создаём объекта парсера
+config.read("config.ini")  # читаем конфиг
+
+bot = commands.InteractionBot(test_guilds=[int(config["Auth"]["guild_id"])])
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=disnake.Activity(type=disnake.ActivityType.watching, name="в Тикеты"))
+    await bot.change_presence(activity=disnake.Activity(type=disnake.ActivityType.watching, name="на развитие Bisquit.Host"))
 
 
 @bot.slash_command(
@@ -59,8 +63,8 @@ class MyModal(disnake.ui.Modal):
     async def callback(self, inter: disnake.ModalInteraction):
         guild22 = inter.guild
         await inter.response.send_message("Ваш тикет создан.", ephemeral=True)
-        techSupport = guild22.get_role(988072591090655272) # роль тех поддержки №1
-        preTechSupport = guild22.get_role(1013081331124682762) # роль тех поддержки №2
+        techSupport = guild22.get_role(int(config["Roles"]["support"]))
+        preTechSupport = guild22.get_role(int(config["Roles"]["sub_support"]))
         overwrites = {
             guild22.default_role: disnake.PermissionOverwrite(view_channel=False),
             inter.author: disnake.PermissionOverwrite(view_channel=True),
@@ -87,6 +91,6 @@ def replaceName(arg: str):
         return "Тема"
     else: 
         return "Описание"
-    
 
-bot.run("Сюда токен бота")
+
+bot.run(config["Auth"]["token"])
